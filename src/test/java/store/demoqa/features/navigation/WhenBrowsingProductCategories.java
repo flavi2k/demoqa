@@ -6,7 +6,7 @@ import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import store.demoqa.features.steps.NavigatingUser;
+import store.demoqa.steps.NavigatingUser;
 
 
 /**

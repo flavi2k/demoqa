@@ -1,4 +1,4 @@
-package store.demoqa.features.steps;
+package store.demoqa.steps;
 
 import net.thucydides.core.annotations.Step;
 import store.demoqa.ui.DemoQAHomePage;
