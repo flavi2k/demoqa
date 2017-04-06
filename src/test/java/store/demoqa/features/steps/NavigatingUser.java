@@ -1,9 +1,7 @@
 package store.demoqa.features.steps;
 
-import net.serenitybdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.Step;
-import store.demoqa.features.ui.DemoQAHomePage;
-import store.demoqa.model.Category;
+import store.demoqa.ui.DemoQAHomePage;
 import store.demoqa.ui.ProductCategory;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
@@ -20,14 +18,39 @@ public class NavigatingUser {
     @Step
     public void isOnTheHomePage() {
         demoQAHomePage.open();
-
     }
 
     @Step
-    public void navigatesToCategory() {
-       productCategory.selectCategory();
+    public void navigatesToAccessoriesCategory() {
+       productCategory.selectAccessoriesCategory();
     }
 
+    @Step
+    public void navigatesToImacsCategory(){
+        productCategory.selectiMacsCategory();
+    }
+
+    @Step
+    public void navigatesToIpadsCategory(){
+        productCategory.selectiPadsCategory();
+    }
+
+    @Step
+    public void navigatesToIphonesCategory(){
+        productCategory.selectiPhonesCategory();
+    }
+
+    @Step
+    public void navigatesToIpodsCategory(){
+        productCategory.selectiPodsCategory();
+    }
+
+    @Step
+    public void navigatesToMacbooksCategory(){
+        productCategory.selectMacBooksCategory();
+    }
+
+    @Step
     public void shouldSeePageTitleContaining(String expectedTitle) {
         assertThat(getDriver().getTitle().equalsIgnoreCase(expectedTitle));
     }

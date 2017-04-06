@@ -1,4 +1,4 @@
-package store.demoqa.features.ui;
+package store.demoqa.ui;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
