@@ -6,7 +6,7 @@ import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import store.demoqa.steps.NavigatingUser;
+import store.demoqa.steps.ProductCategoryNavigatingUser;
 
 
 /**
@@ -16,7 +16,7 @@ import store.demoqa.steps.NavigatingUser;
 public class WhenBrowsingProductCategories {
 
     @Steps
-    NavigatingUser user1;
+    ProductCategoryNavigatingUser user1;
 
     @Managed(driver="chrome")
     WebDriver browser;

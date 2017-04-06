@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Created by FlavianDurigu on 4/5/2017.
  */
-public class NavigatingUser {
+public class ProductCategoryNavigatingUser {
 
     DemoQAHomePage demoQAHomePage;
     ProductCategory productCategory;
