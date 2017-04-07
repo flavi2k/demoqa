@@ -6,17 +6,17 @@ import net.thucydides.core.annotations.Steps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
-import store.demoqa.steps.ProductCategoryNavigatingUser;
+import store.demoqa.steps.ProductCategory_Step;
 
 
 /**
  * Created by FlavianDurigu on 4/5/2017.
  */
 @RunWith(SerenityRunner.class)
-public class WhenBrowsingProductCategories {
+public class TestBrowseProductCategory_Feature {
 
     @Steps
-    ProductCategoryNavigatingUser user1;
+    ProductCategory_Step user1;
 
     @Managed(driver="chrome")
     WebDriver browser;

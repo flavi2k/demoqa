@@ -1,8 +1,8 @@
 package store.demoqa.steps;
 
 import net.thucydides.core.annotations.Step;
-import store.demoqa.ui.DemoQAHomePage;
-import store.demoqa.ui.ProductCategory;
+import store.demoqa.ui.DemoQAHomePage_POF;
+import store.demoqa.ui.ProductCategory_POF;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -10,10 +10,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Created by FlavianDurigu on 4/5/2017.
  */
-public class ProductCategoryNavigatingUser {
+public class ProductCategory_Step {
 
-    DemoQAHomePage demoQAHomePage;
-    ProductCategory productCategory;
+    DemoQAHomePage_POF demoQAHomePage;
+    ProductCategory_POF productCategory;
 
     @Step
     public void isOnTheHomePage() {

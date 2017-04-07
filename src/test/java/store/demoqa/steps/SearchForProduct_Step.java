@@ -2,8 +2,8 @@ package store.demoqa.steps;
 
 
 import net.thucydides.core.annotations.Step;
-import store.demoqa.ui.DemoQAHomePage;
-import store.demoqa.ui.SearchProduct;
+import store.demoqa.ui.DemoQAHomePage_POF;
+import store.demoqa.ui.SearchProduct_POF;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -11,9 +11,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Created by FlavianDurigu on 4/6/2017.
  */
-public class SearchForProductNavigatingUser {
-    SearchProduct srch;
-    DemoQAHomePage homePage;
+public class SearchForProduct_Step {
+    SearchProduct_POF searchPage;
+    DemoQAHomePage_POF homePage;
 
     @Step
     public void isOnTheHomePage(){
@@ -22,7 +22,7 @@ public class SearchForProductNavigatingUser {
 
     @Step
     public void searchForProduct(String s) {
-        srch.searchForProduct(s);
+        searchPage.searchForProduct(s);
 
     }
 

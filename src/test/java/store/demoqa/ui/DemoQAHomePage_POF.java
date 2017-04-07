@@ -8,5 +8,5 @@ import net.thucydides.core.annotations.DefaultUrl;
  */
 
 @DefaultUrl("http://store.demoqa.com/")
-public class DemoQAHomePage extends PageObject{
+public class DemoQAHomePage_POF extends PageObject{
 }

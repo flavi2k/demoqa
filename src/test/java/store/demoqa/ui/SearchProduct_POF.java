@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by FlavianDurigu on 4/6/2017.
  */
-public class SearchProduct extends PageObject {
+public class SearchProduct_POF extends PageObject {
 
     @FindBy (css = ".search")
     WebElement searchButton;

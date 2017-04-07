@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by FlavianDurigu on 4/5/2017.
  */
-public class ProductCategory extends PageObject {
+public class ProductCategory_POF extends PageObject {
 
     @FindBy(css = "#menu-item-33>a")
     WebElement products;
