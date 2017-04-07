@@ -13,8 +13,8 @@ public class SearchProduct_POF extends PageObject {
     @FindBy (css = ".search")
     WebElement searchButton;
 
-    public void searchForProduct(String str){
-        searchButton.sendKeys(str);
+    public void searchForProduct(String product){
+        searchButton.sendKeys(product);
         searchButton.sendKeys(Keys.ENTER);
     }
 }
