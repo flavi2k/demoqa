@@ -26,6 +26,11 @@ public class ProductCategory_Step {
     }
 
     @Step
+    public void addAllToCart() throws InterruptedException {
+        productCategory.addAllProductsToCart();
+    }
+
+    @Step
     public void navigatesToImacsCategory(){
         productCategory.selectiMacsCategory();
     }

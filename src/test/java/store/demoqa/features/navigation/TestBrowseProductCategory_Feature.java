@@ -22,7 +22,7 @@ public class TestBrowseProductCategory_Feature {
     WebDriver browser;
 
     @Test
-    public void userShouldBeAbleToNavigateToAccessoriesCategory(){
+    public void userShouldBeAbleToNavigateToAccessoriesCategory() throws InterruptedException {
 
         // Given
         user1.isOnTheHomePage();
@@ -32,6 +32,8 @@ public class TestBrowseProductCategory_Feature {
 
         // Then
         user1.shouldSeePageTitleContaining("Accessories | ONLINE STORE");
+
+        user1.addAllToCart();
     }
 
     @Test
