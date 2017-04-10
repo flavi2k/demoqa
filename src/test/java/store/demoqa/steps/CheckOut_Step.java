@@ -22,12 +22,18 @@ public class CheckOut_Step {
     public void login(String username, String password){
         myAcc.clickMyAccount();
         myAcc.login(username,password);
+        myAcc.verifyLogoutButton();
     }
 
 
     @Step
     public void goesToCheckout() {
         checkoutPage.goToCheckout();
+    }
+
+    @Step
+    public void verifyPrices(){
+        checkoutPage.verifyPrices();
     }
 
     @Step

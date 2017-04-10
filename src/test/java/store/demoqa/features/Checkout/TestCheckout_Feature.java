@@ -21,19 +21,19 @@ public class TestCheckout_Feature {
     CheckOut_Step user1;
 
     @Test
-    public void shouldBeAbleToRemoveAllProductsFromCart() throws InterruptedException {
+    public void verifyCart()  {
 
         // Given
         user1.isOnTheHomePage();
         user1.login("clr","test123");
-        Thread.sleep(3000);
-        user1.goesToCheckout();
 
         // When
-        user1.removesAllProductsFromCart();
+        user1.goesToCheckout();
+        //user1.removesAllProductsFromCart();
 
         //Then
-        user1.shouldSeeNothingInTheCart();
+        user1.verifyPrices();
+        //user1.shouldSeeNothingInTheCart();
 
     }
 }
