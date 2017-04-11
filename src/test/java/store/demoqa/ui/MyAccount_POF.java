@@ -1,6 +1,7 @@
 package store.demoqa.ui;
 
 import net.serenitybdd.core.pages.PageObject;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -41,10 +42,10 @@ public class MyAccount_POF extends PageObject{
     }
 
     public void verifyLoginButton() {
-        assertThat(loginButton.isDisplayed());
+        Assert.assertTrue(loginButton.isDisplayed());
     }
 
     public void verifyLogoutButton() {
-        assertThat(logoutButton.isDisplayed());
+        Assert.assertTrue(logoutButton.isDisplayed());
     }
 }

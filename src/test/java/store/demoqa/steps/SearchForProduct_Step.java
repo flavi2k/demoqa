@@ -2,6 +2,7 @@ package store.demoqa.steps;
 
 
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 import store.demoqa.ui.DemoQAHomePage_POF;
 import store.demoqa.ui.SearchProduct_POF;
 
@@ -23,10 +24,11 @@ public class SearchForProduct_Step {
     @Step
     public void searchForProduct(String s) {
         searchPage.searchForProduct(s);
-
     }
 
     public void shouldSeeProduct(String expectedTitle) {
-        assertThat(getDriver().getTitle().equalsIgnoreCase(expectedTitle));
+       /* System.out.println("Exp:"+expectedTitle);
+        System.out.println("Act:"+getDriver().getTitle());*/
+        Assert.assertTrue(getDriver().getTitle().equalsIgnoreCase(expectedTitle));
     }
 }

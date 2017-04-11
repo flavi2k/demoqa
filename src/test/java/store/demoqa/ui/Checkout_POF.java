@@ -1,6 +1,7 @@
 package store.demoqa.ui;
 
 import net.serenitybdd.core.pages.PageObject;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.List;
@@ -63,13 +64,13 @@ public class Checkout_POF extends PageObject {
 
                 dSubTotal = dPricePerItemFromWebPage * dQuantityFromWebPage;
 
-                assertThat(dSubTotal).isEqualTo(dSubTotalFromWebPage);
+                Assert.assertTrue((dSubTotal).equals(dSubTotalFromWebPage));
                 System.out.println("calculated sub-total is: "+dSubTotal);
                 System.out.println("Sub-total from web-page is: " + dSubTotalFromWebPage);
                 dYourTotal = dYourTotal + dSubTotal;
             }
         }
-        assertThat(dYourTotal).isEqualTo(dYourTotalFromWebPage);
+        Assert.assertTrue((dYourTotal).equals(dYourTotalFromWebPage));
         System.out.println("calculated Total is: "+dYourTotal);
         System.out.println("Total from web-page is: "+ dYourTotalFromWebPage);
     }
@@ -85,6 +86,6 @@ public class Checkout_POF extends PageObject {
 
     public void nothingInCart() {
         //System.out.println(entryContent.getText());
-        assertThat(entryContent.getText().equalsIgnoreCase("Oops, there is nothing in your cart."));
+        Assert.assertTrue(entryContent.getText().equalsIgnoreCase("Oops, there is nothing in your cart."));
     }
 }

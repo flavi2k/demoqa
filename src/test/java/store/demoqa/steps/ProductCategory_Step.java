@@ -1,6 +1,7 @@
 package store.demoqa.steps;
 
 import net.thucydides.core.annotations.Step;
+import org.junit.Assert;
 import store.demoqa.ui.DemoQAHomePage_POF;
 import store.demoqa.ui.ProductCategory_POF;
 
@@ -15,7 +16,7 @@ public class ProductCategory_Step {
     DemoQAHomePage_POF demoQAHomePage;
     ProductCategory_POF productCategory;
 
-    @Step
+    @Step ("User is on the home page")
     public void isOnTheHomePage() {
         demoQAHomePage.open();
     }
@@ -57,6 +58,6 @@ public class ProductCategory_Step {
 
     @Step
     public void shouldSeePageTitleContaining(String expectedTitle) {
-        assertThat(getDriver().getTitle().equalsIgnoreCase(expectedTitle));
+                Assert.assertTrue(getDriver().getTitle().equalsIgnoreCase(expectedTitle));
     }
 }

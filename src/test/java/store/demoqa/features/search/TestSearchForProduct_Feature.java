@@ -29,7 +29,7 @@ public class TestSearchForProduct_Feature {
         user1.searchForProduct("iphone");
 
         //Then
-        user1.shouldSeeProduct("iphone | Search Results  | ONLINE STORE");
+        user1.shouldSeeProduct("iphone | Search Results | ONLINE STORE");
     }
 
 }
