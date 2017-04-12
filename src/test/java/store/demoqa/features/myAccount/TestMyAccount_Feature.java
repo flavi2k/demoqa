@@ -21,7 +21,7 @@ public class TestMyAccount_Feature {
     WebDriver browser;
 
     @Test
-    public void userShouldBeAbleToLogin(){
+    public void userShouldBeAbleToLogin_Logout(){
 
         // Given
         user1.isOnTheHomePage();
@@ -38,5 +38,6 @@ public class TestMyAccount_Feature {
         //Then
         user1.shouldSeeLogoutButton();
 
+        user1.logout();
     }
 }

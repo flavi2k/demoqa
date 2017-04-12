@@ -5,9 +5,6 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
-import static org.assertj.core.api.Assertions.assertThat;
-
 /**
  * Created by FlavianDurigu on 4/7/2017.
  */
@@ -39,6 +36,10 @@ public class MyAccount_POF extends PageObject{
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
         loginButton.submit();
+    }
+
+    public void logout(){
+        logoutButton.click();
     }
 
     public void verifyLoginButton() {

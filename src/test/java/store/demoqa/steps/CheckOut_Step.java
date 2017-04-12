@@ -25,7 +25,6 @@ public class CheckOut_Step {
         myAcc.verifyLogoutButton();
     }
 
-
     @Step
     public void goesToCheckout() {
         checkoutPage.goToCheckout();
@@ -41,7 +40,18 @@ public class CheckOut_Step {
         checkoutPage.removeAllProducts();
     }
 
+    @Step
     public void shouldSeeNothingInTheCart() {
         checkoutPage.nothingInCart();
+    }
+
+    @Step
+    public void updateQuantities(String quantity){
+        checkoutPage.updateAllQuantities(quantity);
+    }
+
+    @Step
+    public void verifyQuantity(){
+
     }
 }

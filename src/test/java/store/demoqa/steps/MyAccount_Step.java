@@ -4,8 +4,6 @@ import net.thucydides.core.annotations.Step;
 import store.demoqa.ui.DemoQAHomePage_POF;
 import store.demoqa.ui.MyAccount_POF;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 /**
  * Created by FlavianDurigu on 4/7/2017.
  */
@@ -37,5 +35,10 @@ public class MyAccount_Step {
     @Step
     public void shouldSeeLogoutButton() {
         myAccount.verifyLogoutButton();
+    }
+
+    @Step
+    public void logout(){
+        myAccount.logout();
     }
 }

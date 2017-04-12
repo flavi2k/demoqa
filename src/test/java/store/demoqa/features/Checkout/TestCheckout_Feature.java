@@ -29,11 +29,11 @@ public class TestCheckout_Feature {
 
         // When
         user1.goesToCheckout();
+        user1.updateQuantities("5");
         //user1.removesAllProductsFromCart();
 
         //Then
         user1.verifyPrices();
         //user1.shouldSeeNothingInTheCart();
-
     }
 }
