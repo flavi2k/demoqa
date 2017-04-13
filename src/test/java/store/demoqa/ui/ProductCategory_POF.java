@@ -1,17 +1,18 @@
 package store.demoqa.ui;
 
 
-import net.serenitybdd.core.pages.PageObject;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
 /**
  * Created by FlavianDurigu on 4/5/2017.
  */
-public class ProductCategory_POF extends PageObject {
+public class ProductCategory_POF extends AbstractPageObject {
 
     @FindBy(css = "#menu-item-33>a")
     WebElement products;
@@ -40,13 +41,17 @@ public class ProductCategory_POF extends PageObject {
     @FindBy(css=".continue_shopping")
     WebElement continueShoppingButton;
 
-    public void addAllProductsToCart() throws InterruptedException {
+    public ProductCategory_POF(WebDriver driver) {
+        super(driver);
+    }
+
+    public void addAllProductsToCart()  {
         int numberOfElements = buyButton.size();
         for(int i=0;i<numberOfElements;i++) {
+            waitFor(ExpectedConditions.elementToBeClickable(buyButton.get(i)));
             buyButton.get(i).click();
-            Thread.sleep(3000);
+            waitFor(ExpectedConditions.elementToBeClickable(continueShoppingButton));
             continueShoppingButton.click();
-            Thread.sleep(3000);
         }
     }
 

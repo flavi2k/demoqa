@@ -6,7 +6,6 @@ import store.demoqa.ui.DemoQAHomePage_POF;
 import store.demoqa.ui.ProductCategory_POF;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Created by FlavianDurigu on 4/5/2017.
@@ -27,7 +26,7 @@ public class ProductCategory_Step {
     }
 
     @Step
-    public void addAllToCart() throws InterruptedException {
+    public void addAllToCart()  {
         productCategory.addAllProductsToCart();
     }
 

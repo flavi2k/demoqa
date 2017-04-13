@@ -22,7 +22,7 @@ public class TestBrowseProductCategory_Feature {
     WebDriver browser;
 
     @Test
-    public void userShouldBeAbleToNavigateToAccessoriesCategory() throws InterruptedException {
+    public void userShouldBeAbleToNavigateToAccessoriesCategory()  {
 
         // Given
         user1.isOnTheHomePage();
