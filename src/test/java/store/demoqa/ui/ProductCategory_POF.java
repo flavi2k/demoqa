@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
+import static net.serenitybdd.core.Serenity.takeScreenshot;
+
 /**
  * Created by FlavianDurigu on 4/5/2017.
  */
@@ -52,6 +54,7 @@ public class ProductCategory_POF extends AbstractPageObject {
             buyButton.get(i).click();
             waitFor(ExpectedConditions.elementToBeClickable(continueShoppingButton));
             continueShoppingButton.click();
+            takeScreenshot();
         }
     }
 
