@@ -39,5 +39,6 @@ public class TestMyAccount_Feature {
         user1.shouldSeeLogoutButton();
 
         user1.logout();
+        user1.verifyLogout();
     }
 }

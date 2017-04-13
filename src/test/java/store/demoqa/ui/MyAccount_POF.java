@@ -1,14 +1,17 @@
 package store.demoqa.ui;
 
-import net.serenitybdd.core.pages.PageObject;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by FlavianDurigu on 4/7/2017.
  */
-public class MyAccount_POF extends PageObject{
+public class MyAccount_POF extends AbstractPageObject{
+
+
+    AbstractPageObject abs;
 
     @FindBy(css=".account_icon")
     WebElement myAccountButton;
@@ -28,6 +31,10 @@ public class MyAccount_POF extends PageObject{
     @FindBy(css="#account_logout>a")
     WebElement logoutButton;
 
+    public MyAccount_POF(WebDriver driver) {
+        super(driver);
+    }
+
     public void clickMyAccount() {
         myAccountButton.click();
     }
@@ -38,15 +45,18 @@ public class MyAccount_POF extends PageObject{
         loginButton.submit();
     }
 
-    public void logout(){
-        logoutButton.click();
+    public void verifyLogout() {
+        abs.waitForElementToDisappearFromDomById("account_logout");
     }
-
     public void verifyLoginButton() {
         Assert.assertTrue(loginButton.isDisplayed());
     }
 
     public void verifyLogoutButton() {
         Assert.assertTrue(logoutButton.isDisplayed());
+    }
+
+    public void logout(){
+        logoutButton.click();
     }
 }

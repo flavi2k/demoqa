@@ -41,4 +41,9 @@ public class MyAccount_Step {
     public void logout(){
         myAccount.logout();
     }
+
+    @Step
+    public void verifyLogout() {
+        myAccount.verifyLogout();
+    }
 }
