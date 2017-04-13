@@ -22,6 +22,7 @@ public class TestBrowseProductCategory_Feature {
     WebDriver browser;
 
     @Test
+    //@BlurScreenshots(BlurLevel.LIGHT)
     public void userShouldBeAbleToNavigateToAccessoriesCategory()  {
 
         // Given

@@ -51,10 +51,10 @@ public class ProductCategory_POF extends AbstractPageObject {
         int numberOfElements = buyButton.size();
         for(int i=0;i<numberOfElements;i++) {
             waitFor(ExpectedConditions.elementToBeClickable(buyButton.get(i)));
+            takeScreenshot();
             buyButton.get(i).click();
             waitFor(ExpectedConditions.elementToBeClickable(continueShoppingButton));
             continueShoppingButton.click();
-            takeScreenshot();
         }
     }
 

@@ -10,9 +10,6 @@ import org.openqa.selenium.support.FindBy;
  */
 public class MyAccount_POF extends AbstractPageObject{
 
-
-    AbstractPageObject abs;
-
     @FindBy(css=".account_icon")
     WebElement myAccountButton;
 
@@ -46,7 +43,7 @@ public class MyAccount_POF extends AbstractPageObject{
     }
 
     public void verifyLogout() {
-        abs.waitForElementToDisappearFromDomById("account_logout");
+        waitForElementToDisappearFromDomById("account_logout");
     }
     public void verifyLoginButton() {
         Assert.assertTrue(loginButton.isDisplayed());
