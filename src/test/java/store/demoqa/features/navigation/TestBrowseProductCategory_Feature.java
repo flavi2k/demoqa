@@ -38,6 +38,13 @@ public class TestBrowseProductCategory_Feature {
     }
 
     @Test
+    public void navigating(){
+        user1.isOnTheHomePage();
+        user1.catNavigation("iMacs");
+        user1.shouldSeePageTitleContaining("IMACS | ONLINE STORE");
+    }
+
+    @Test
     public void userShouldBeAbleToNavigateToImacsCategory(){
 
         // Given

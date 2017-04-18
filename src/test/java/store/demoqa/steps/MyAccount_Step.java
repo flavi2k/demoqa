@@ -43,7 +43,7 @@ public class MyAccount_Step {
     }
 
     @Step
-    public void verifyLogout() {
+    public void shouldNotSeeLogoutButton() {
         myAccount.verifyLogout();
     }
 }

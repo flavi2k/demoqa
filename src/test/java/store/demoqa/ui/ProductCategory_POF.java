@@ -1,6 +1,7 @@
 package store.demoqa.ui;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -22,7 +23,7 @@ public class ProductCategory_POF extends AbstractPageObject {
     @FindBy(css = "#menu-item-34>a")
     WebElement accessories;
 
-    @FindBy(css = "#menu-item-35>a")
+    @FindBy(css = "#menu-item-35")
     WebElement iMacs;
 
     @FindBy(css = "#menu-item-36>a")
@@ -42,6 +43,18 @@ public class ProductCategory_POF extends AbstractPageObject {
 
     @FindBy(css=".continue_shopping")
     WebElement continueShoppingButton;
+
+    /*@FindBy(linkText="Accessories")
+    List<WebElement> allCategories;*/
+
+    public void categoryNavigation(String text){
+
+        Actions action = new Actions(getDriver());
+        action.moveToElement(products).build().perform();
+
+        getDriver().findElement(By.linkText(text)).click();
+
+    }
 
     public ProductCategory_POF(WebDriver driver) {
         super(driver);

@@ -26,6 +26,11 @@ public class ProductCategory_Step {
     }
 
     @Step
+    public void catNavigation(String text){
+        productCategory.categoryNavigation(text);
+    }
+
+    @Step
     public void addAllToCart()  {
         productCategory.addAllProductsToCart();
     }
