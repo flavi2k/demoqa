@@ -49,6 +49,7 @@ public class ProductCategory_POF extends AbstractPageObject {
 
     public void categoryNavigation(String text){
 
+        waitFor(ExpectedConditions.elementToBeClickable(products));
         Actions action = new Actions(getDriver());
         action.moveToElement(products).build().perform();
 

@@ -1,8 +1,10 @@
 package store.demoqa.features.navigation;
 
-import net.serenitybdd.junit.runners.SerenityRunner;
+import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.junit.annotations.Qualifier;
+import net.thucydides.junit.annotations.UseTestDataFrom;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -12,8 +14,17 @@ import store.demoqa.steps.ProductCategory_Step;
 /**
  * Created by FlavianDurigu on 4/5/2017.
  */
-@RunWith(SerenityRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
+@UseTestDataFrom(value = "src\\test\\java\\store\\demoqa\\resources\\Categories.csv")
 public class TestBrowseProductCategory_Feature {
+
+    String category;
+    String expectedTitle;
+
+    @Qualifier
+    public String getQualifier() {
+        return category;
+    }
 
     @Steps
     ProductCategory_Step user1;
@@ -23,6 +34,14 @@ public class TestBrowseProductCategory_Feature {
 
     @Test
     //@BlurScreenshots(BlurLevel.LIGHT)
+    public void navigating(){
+        user1.isOnTheHomePage();
+        user1.catNavigation(category);
+        user1.shouldSeePageTitleContaining(expectedTitle);
+    }
+
+    /* @Test
+
     public void userShouldBeAbleToNavigateToAccessoriesCategory()  {
 
         // Given
@@ -35,16 +54,9 @@ public class TestBrowseProductCategory_Feature {
         user1.shouldSeePageTitleContaining("Accessories | ONLINE STORE");
 
         user1.addAllToCart();
-    }
+    }*/
 
-    @Test
-    public void navigating(){
-        user1.isOnTheHomePage();
-        user1.catNavigation("iMacs");
-        user1.shouldSeePageTitleContaining("IMACS | ONLINE STORE");
-    }
-
-    @Test
+    /*@Test
     public void userShouldBeAbleToNavigateToImacsCategory(){
 
         // Given
@@ -107,5 +119,5 @@ public class TestBrowseProductCategory_Feature {
 
         // Then
         user1.shouldSeePageTitleContaining("MACBOOKS | ONLINE STORE");
-    }
+    }*/
 }
