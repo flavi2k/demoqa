@@ -26,7 +26,7 @@ public class ProductCategory_Step {
     }
 
     @Step
-    public void catNavigation(String text){
+    public void navigateToCategory(String text){
         productCategory.categoryNavigation(text);
     }
 

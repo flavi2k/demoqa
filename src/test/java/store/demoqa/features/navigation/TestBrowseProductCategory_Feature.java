@@ -34,9 +34,9 @@ public class TestBrowseProductCategory_Feature {
 
     @Test
     //@BlurScreenshots(BlurLevel.LIGHT)
-    public void navigating(){
+    public void navigatingToCategories(){
         user1.isOnTheHomePage();
-        user1.catNavigation(category);
+        user1.navigateToCategory(category);
         user1.shouldSeePageTitleContaining(expectedTitle);
     }
 
