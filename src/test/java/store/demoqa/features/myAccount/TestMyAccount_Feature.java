@@ -17,10 +17,8 @@ import store.demoqa.steps.MyAccount_Step;
 @UseTestDataFrom(value = "src\\test\\java\\store\\demoqa\\resources\\TestData.csv")
 public class TestMyAccount_Feature {
 
-    public TestMyAccount_Feature(){}
-
-     String username;
-     String password;
+    String username;
+    String password;
 
     @Qualifier
     public String getQualifier() {
@@ -28,7 +26,7 @@ public class TestMyAccount_Feature {
     }
 
     @Steps
-    public MyAccount_Step user1;
+    MyAccount_Step user1;
 
     @Managed(driver ="chrome")
     WebDriver browser;
