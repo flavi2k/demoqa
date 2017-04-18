@@ -1,8 +1,10 @@
 package store.demoqa.features.myAccount;
 
-import net.serenitybdd.junit.runners.SerenityRunner;
+import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.junit.annotations.Qualifier;
+import net.thucydides.junit.annotations.UseTestDataFrom;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -11,11 +13,22 @@ import store.demoqa.steps.MyAccount_Step;
 /**
  * Created by FlavianDurigu on 4/7/2017.
  */
-@RunWith(SerenityRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
+@UseTestDataFrom(value = "src\\test\\java\\store\\demoqa\\resources\\TestData.csv")
 public class TestMyAccount_Feature {
 
+    public TestMyAccount_Feature(){}
+
+     String username;
+     String password;
+
+    @Qualifier
+    public String getQualifier() {
+        return username;
+    }
+
     @Steps
-    MyAccount_Step user1;
+    public MyAccount_Step user1;
 
     @Managed(driver ="chrome")
     WebDriver browser;
@@ -33,7 +46,9 @@ public class TestMyAccount_Feature {
         user1.shouldSeeLoginButton();
 
         // When
-        user1.login("clr","test123");
+
+        // username/password are extracted from csv
+        user1.login(username,password);
 
         //Then
         user1.shouldSeeLogoutButton();

@@ -43,7 +43,9 @@ public class MyAccount_POF extends AbstractPageObject{
     }
 
     public void verifyLogout() {
-        waitForElementToDisappearFromDomById("account_logout");
+        waitForAbsenceOf("#account_logout>a");
+
+        //waitForElementToDisappearFromDomById("account_logout");
     }
     public void verifyLoginButton() {
         Assert.assertTrue(loginButton.isDisplayed());
