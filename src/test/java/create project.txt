@@ -1,0 +1,7 @@
+mvn archetype:generate -Dfilter=serenity
+
+4 - screenplay; Selenium2 and JUnit
+
+6 - latest version
+
+net.serenitybdd
