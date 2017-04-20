@@ -28,6 +28,9 @@ public class MyAccount_POF extends AbstractPageObject{
     @FindBy(css="#account_logout>a")
     WebElement logoutButton;
 
+    @FindBy(css = ".response")
+    WebElement invalidCredentialsText;
+
     public MyAccount_POF(WebDriver driver) {
         super(driver);
     }
@@ -57,5 +60,17 @@ public class MyAccount_POF extends AbstractPageObject{
 
     public void logout(){
         logoutButton.click();
+    }
+
+    public void wrongCredentials(String username, String password) {
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginButton.submit();
+    }
+
+    public void verifyInvalidCredentials() {
+        System.out.println(invalidCredentialsText.getText().toString());
+        Assert.assertTrue(invalidCredentialsText.getText().toString().equals("ERROR: Invalid login credentials."));
+
     }
 }

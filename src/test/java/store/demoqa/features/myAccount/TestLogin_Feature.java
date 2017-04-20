@@ -15,7 +15,7 @@ import store.demoqa.steps.MyAccount_Step;
  */
 @RunWith(SerenityParameterizedRunner.class)
 @UseTestDataFrom(value = "src\\test\\java\\store\\demoqa\\resources\\TestData.csv")
-public class TestMyAccount_Feature {
+public class TestLogin_Feature {
 
     String username;
     String password;

@@ -46,4 +46,12 @@ public class MyAccount_Step {
     public void shouldNotSeeLogoutButton() {
         myAccount.verifyLogout();
     }
+
+    public void logsInWithWrongPassword(String username, String password) {
+        myAccount.wrongCredentials(username,password);
+    }
+
+    public void shouldSeeInvalidCredentialsError() {
+        myAccount.verifyInvalidCredentials();
+    }
 }
