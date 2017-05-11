@@ -25,7 +25,7 @@ public class ProductCategory_Step {
        productCategory.selectAccessoriesCategory();
     }
 
-    @Step
+    @Step ("User navigates to {0} category")
     public void navigateToCategory(String text){
         productCategory.categoryNavigation(text);
     }

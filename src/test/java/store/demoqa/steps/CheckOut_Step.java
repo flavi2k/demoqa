@@ -23,6 +23,7 @@ public class CheckOut_Step {
         myAcc.clickMyAccount();
         myAcc.login(username,password);
         myAcc.verifyLogoutButton();
+
     }
 
     @Step
@@ -45,7 +46,7 @@ public class CheckOut_Step {
         checkoutPage.nothingInCart();
     }
 
-    @Step
+    @Step ("Updates the quantities to: {0}")
     public void updateQuantities(String quantity){
         checkoutPage.updateAllQuantities(quantity);
     }
